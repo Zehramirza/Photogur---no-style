@@ -22,4 +22,5 @@ class PicturesController < ApplicationController
       # otherwise render the view associated with the action :new (i.e. new.html.erb)
       render :new
     end
+  end
 end
