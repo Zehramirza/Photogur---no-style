@@ -3,7 +3,7 @@ Photogur::Application.routes.draw do
   root :to => "pictures#index"
   post 'pictures' => "pictures#create"
   
-  
+
   get "/" => "pictures#index"
   get 'pictures' => 'pictures#index'
 
@@ -11,6 +11,8 @@ Photogur::Application.routes.draw do
   # get 'pictures/1' => 'pictures#picture1'
   #zebra is going to be a key in params
   get "/pictures/:id" => "pictures#show", as: "picture"
+
+  get 'pictures/:id/edit' => "pictures#edit", as: "edit_picture"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
